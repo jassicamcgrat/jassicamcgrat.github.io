@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jassica McGrat | Research & Insights</title>
+    <meta name="description" content="Explore research resources, practical research tools, insights, and frameworks created by Jassica McGrat.">
+    <meta name="author" content="Jassica McGrat">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jassicamcgrat.github.io/">
+
+    <meta property="og:title" content="Jassica McGrat | Research & Insights">
+    <meta property="og:description" content="Research resources, practical tools, insights, and frameworks by Jassica McGrat.">
+    <meta property="og:url" content="https://jassicamcgrat.github.io/">
+    <meta property="og:type" content="website">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fc;
+            color: #172033;
+            line-height: 1.6;
+        }
+        nav {
+            width: 100%;
+            background: rgba(255,255,255,.96);
+            border-bottom: 1px solid #e8eaf0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 21px;
+            font-weight: 700;
+            color: #172033;
+            text-decoration: none;
+        }
+        .logo span { color: #4f46e5; }
+        .nav-link {
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border: 1px solid #dcdff0;
+            padding: 9px 16px;
+            border-radius: 8px;
+            transition: .2s ease;
+        }
+        .nav-link:hover { background: #4f46e5; color: white; }
+        .hero {
+            min-height: 82vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #fff 0%, #eef1ff 100%);
+        }
+        .container { max-width: 1000px; width: 100%; margin: auto; }
+        .hero-content { text-align: center; max-width: 800px; margin: auto; }
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 50px;
+            background: #e8eaff;
+            color: #4b46a8;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 22px;
+        }
+        h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.08;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+        }
+        .hero p {
+            font-size: 19px;
+            color: #5e6678;
+            max-width: 680px;
+            margin: 0 auto 30px;
+        }
+        .website-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #4f46e5;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+        }
+        .website-link:hover { text-decoration: underline; }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: .2s ease;
+        }
+        .btn-primary { background: #4f46e5; color: white; }
+        .btn-primary:hover { background: #3730a3; transform: translateY(-2px); }
+        .btn-secondary {
+            background: white;
+            color: #30384d;
+            border: 1px solid #dfe2ea;
+        }
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,.07);
+        }
+        .section { padding: 80px 20px; }
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 14px;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #687083;
+            max-width: 650px;
+            margin: 0 auto 45px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #e7e9ef;
+            box-shadow: 0 10px 30px rgba(31,41,55,.05);
+        }
+        .card h3 { margin-bottom: 12px; font-size: 21px; }
+        .card p { color: #687083; margin-bottom: 20px; }
+        .card a {
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .card a:hover { text-decoration: underline; }
+        .toolkit {
+            background: #111827;
+            color: white;
+            border-radius: 24px;
+            padding: 55px;
+            text-align: center;
+        }
+        .toolkit h2 { font-size: 38px; margin-bottom: 15px; }
+        .toolkit p {
+            color: #c7cad4;
+            max-width: 650px;
+            margin: 0 auto 28px;
+        }
+        footer {
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+            color: #737b8c;
+            font-size: 14px;
+            background: white;
+        }
+        footer a {
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        footer a:hover { text-decoration: underline; }
+        @media (max-width: 800px) {
+            .cards { grid-template-columns: 1fr; }
+            .toolkit { padding: 35px 22px; }
+            .toolkit h2 { font-size: 30px; }
+            .nav-container { padding: 15px; }
+            .logo { font-size: 18px; }
+            .nav-link { font-size: 13px; padding: 8px 12px; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="https://jassicamcgrat.github.io/" class="logo">
+                Jassica <span>McGrat</span>
+            </a>
+            <a href="https://www.theinsightsdesk.com/" class="nav-link" target="_blank" rel="noopener">
+                The Insights Desk
+            </a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Research &amp; Insights</span>
+                <h1>Research Made More Practical.</h1>
+                <p>
+                    Welcome to my research space — a collection of practical
+                    research resources, tools, frameworks, and insights designed
+                    to make research easier to understand and apply.
+                </p>
+
+                <a href="https://www.theinsightsdesk.com/" class="website-link" target="_blank" rel="noopener">
+                    The Insights Desk →
+                </a>
+
+                <div class="buttons">
+                    <a class="btn btn-primary" href="https://jassicamcgrat.github.io/Research-Toolkit/">
+                        Explore Research Toolkit
+                    </a>
+                    <a class="btn btn-secondary" href="#about">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">Research Resources</h2>
+            <p class="section-subtitle">
+                Practical resources for understanding research methods,
+                evaluating information, and making better research decisions.
+            </p>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Research Toolkit</h3>
+                    <p>
+                        Explore practical research tools, calculators,
+                        frameworks, and resources for working with research
+                        more effectively.
+                    </p>
+                    <a href="https://jassicamcgrat.github.io/Research-Toolkit/">Open Toolkit →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Research Methods</h3>
+                    <p>
+                        Learn about qualitative and quantitative research,
+                        research design, data collection, and analysis.
+                    </p>
+                    <a href="https://jassicamcgrat.github.io/Research-Toolkit/">Explore Resources →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Research Insights</h3>
+                    <p>
+                        Discover practical ideas and frameworks that help turn
+                        research concepts into useful real-world decisions.
+                    </p>
+                    <a href="https://jassicamcgrat.github.io/Research-Toolkit/">View Insights →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="toolkit">
+                <h2>Explore the Research Toolkit</h2>
+                <p>
+                    A practical collection of research resources designed to
+                    help students, researchers, professionals, and curious
+                    learners work through research questions with greater clarity.
+                </p>
+                <a class="btn btn-primary" href="https://jassicamcgrat.github.io/Research-Toolkit/">
+                    Visit Research Toolkit →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Jassica McGrat.
+        Visit
+        <a href="https://www.theinsightsdesk.com/" target="_blank" rel="noopener">
+            The Insights Desk
+        </a>
+        for more research insights.
+    </footer>
+</body>
+</html>
