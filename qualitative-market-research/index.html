@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Qualitative Market Research: A Practical Guide for Better Decisions</title>
+  <meta name="description" content="Learn how qualitative market research uncovers customer needs, motivations, and market insights through interviews, focus groups, observation, and expert conversations.">
+  <meta name="keywords" content="qualitative market research, qualitative research methods, qualitative market research methods, customer interviews, focus groups, market insights, qualitative data analysis">
+  <meta name="author" content="Jassica McGrat">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#6d28d9">
+
+  <link rel="canonical" href="https://jassicamcgrat.github.io/qualitative-market-research/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Qualitative Market Research: A Practical Guide for Better Decisions">
+  <meta property="og:description" content="A practical guide to qualitative market research, methods, analysis, business use cases, and customer insight.">
+  <meta property="og:url" content="https://jassicamcgrat.github.io/qualitative-market-research/">
+  <meta property="og:image" content="https://jassicamcgrat.github.io/qualitative-market-research/hero.png">
+  <meta property="og:site_name" content="Jassica McGrat">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Qualitative Market Research: A Practical Guide for Better Decisions">
+  <meta name="twitter:description" content="Understand customers, motivations, and market needs with practical qualitative research methods.">
+  <meta name="twitter:image" content="https://jassicamcgrat.github.io/qualitative-market-research/hero.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Qualitative Market Research: A Practical Guide for Better Decisions",
+    "description": "A practical guide to qualitative market research, methods, analysis, business use cases, and customer insight.",
+    "author": {
+      "@type": "Person",
+      "name": "Jassica McGrat"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Jassica McGrat"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jassicamcgrat.github.io/qualitative-market-research/"
+    },
+    "image": "https://jassicamcgrat.github.io/qualitative-market-research/hero.png"
+  }
+  </script>
+
+  <style>
+    :root {
+      --purple: #6d28d9;
+      --purple-dark: #4c1d95;
+      --purple-soft: #f3e8ff;
+      --ink: #17131f;
+      --muted: #6b6475;
+      --line: #e9e4ef;
+      --white: #ffffff;
+      --bg: #fbfaff;
+      --shadow: 0 20px 60px rgba(56, 28, 94, .10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.75;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(233,228,239,.9);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      background: var(--purple);
+      color: white;
+      clip-path: polygon(25% 6%,75% 6%,100% 50%,75% 94%,25% 94%,0 50%);
+      font-size: 15px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+      color: #4e4857;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--purple); }
+
+    .insights-link {
+      text-decoration: none;
+      background: var(--purple-soft);
+      color: var(--purple-dark);
+      border: 1px solid #e5d5ff;
+      padding: 9px 15px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 76px 0 72px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(196,181,253,.38), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #fbf8ff 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr .92fr;
+      align-items: center;
+      gap: 56px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--purple-soft);
+      color: var(--purple-dark);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .hero h1 {
+      margin: 18px 0 18px;
+      max-width: 700px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 5vw, 68px);
+      line-height: 1.04;
+      letter-spacing: -.045em;
+    }
+
+    .hero h1 span { color: var(--purple); }
+
+    .hero-intro {
+      max-width: 650px;
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 26px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 22px;
+      color: #756d80;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+    }
+
+    .hero-image-wrap::before {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(109,40,217,.18), rgba(216,180,254,.05));
+      transform: rotate(2deg);
+    }
+
+    .hero-image {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-height: 570px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.9);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 58px;
+      padding: 72px 0 90px;
+    }
+
+    article {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: clamp(25px, 4vw, 48px);
+      box-shadow: 0 12px 40px rgba(30, 15, 50, .04);
+    }
+
+    .section-label {
+      color: var(--purple);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      margin-bottom: 10px;
+    }
+
+    article h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 3vw, 38px);
+      line-height: 1.18;
+      margin: 42px 0 14px;
+      letter-spacing: -.025em;
+    }
+
+    article h2:first-of-type { margin-top: 0; }
+
+    article h3 {
+      font-size: 21px;
+      line-height: 1.3;
+      margin: 28px 0 8px;
+    }
+
+    article p { margin: 0 0 18px; color: #433c4c; }
+
+    article ul, article ol {
+      color: #433c4c;
+      padding-left: 23px;
+    }
+
+    article li { margin-bottom: 9px; }
+
+    article a {
+      color: var(--purple-dark);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .comparison {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      font-size: 14px;
+    }
+
+    .comparison th,
+    .comparison td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .comparison th {
+      background: var(--purple-soft);
+      color: var(--purple-dark);
+    }
+
+    .comparison tr:last-child td { border-bottom: 0; }
+
+    .faq {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: #fcfbff;
+    }
+
+    .faq h3 { margin-top: 0; }
+
+    .cta {
+      margin-top: 35px;
+      padding: 28px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #4c1d95, #7c3aed);
+      color: white;
+    }
+
+    .cta h2 {
+      margin: 0 0 8px;
+      color: white;
+    }
+
+    .cta p { color: rgba(255,255,255,.85); }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 11px 17px;
+      border-radius: 10px;
+      background: white;
+      color: var(--purple-dark);
+      text-decoration: none;
+    }
+
+    aside {
+      position: relative;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 100px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .side-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .side-card h3 {
+      margin: 0 0 13px;
+      font-size: 16px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 7px 0;
+      color: #625a6d;
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .toc a:hover { color: var(--purple); }
+
+    footer {
+      background: #15111c;
+      color: white;
+      padding: 45px 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand { font-weight: 800; }
+
+    footer p {
+      margin: 8px 0 0;
+      color: #bdb5c7;
+      max-width: 520px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ddd5e7;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 920px) {
+      .nav-links { display: none; }
+
+      .hero-grid,
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { padding-top: 48px; }
+
+      aside { order: 2; }
+
+      .sidebar { position: static; }
+    }
+
+    @media (max-width: 620px) {
+      .container { width: min(100% - 26px, 1160px); }
+
+      .nav { min-height: 66px; }
+
+      .insights-link { display: none; }
+
+      .hero {
+        padding: 42px 0 50px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero-intro {
+        font-size: 16px;
+      }
+
+      .layout {
+        padding: 45px 0 60px;
+        gap: 28px;
+      }
+
+      article {
+        border-radius: 18px;
+        padding: 23px 19px;
+      }
+
+      .comparison {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .hero-image {
+        border-radius: 18px;
+      }
+
+      footer a {
+        display: block;
+        margin: 9px 0 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-image-wrap { animation: floatImage 6s ease-in-out infinite; }
+
+      @keyframes floatImage {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-7px); }
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="https://jassicamcgrat.github.io/">
+      <span class="brand-mark">J</span>
+      <span>Jassica McGrat</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="https://jassicamcgrat.github.io/">Home</a>
+      <a href="#article">Blog</a>
+      <a href="https://jassicamcgrat.github.io/Research-Toolkit/">Research Toolkit</a>
+      <a href="https://jassicamcgrat.github.io/expert-calls-meetings/">Expert Calls &amp; Meetings</a>
+      <a href="https://www.theinsightsdesk.com/">About</a>
+    </nav>
+
+    <a class="insights-link" href="https://www.theinsightsdesk.com/">The Insights Desk</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Research Guide</div>
+
+        <h1>
+          Qualitative <span>Market Research</span>: A Practical Guide for Better Decisions
+        </h1>
+
+        <p class="hero-intro">
+          Qualitative market research helps businesses understand what customers think,
+          why they behave the way they do, and what is really happening behind the numbers.
+        </p>
+
+        <div class="meta">
+          <span>By Jassica McGrat</span>
+          <span>Research &amp; Insights</span>
+          <span>Practical Guide</span>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <img
+          src="hero.png"
+          class="hero-image"
+          alt="Qualitative market research and customer insight research workspace"
+          loading="eager"
+        >
+      </div>
+    </div>
+  </section>
+
+  <div class="container layout" id="article">
+
+    <article>
+      <div class="section-label">INTRODUCTION</div>
+
+      <p>
+        <strong>
+          <a href="https://www.theinsightsdesk.com/blog/qualitative-market-research-methods-examples--benefits" target="_blank" rel="noopener">
+            Qualitative market research
+          </a>
+        </strong>
+        helps businesses understand customer experiences, motivations, opinions, needs,
+        and behaviors in greater depth. Instead of focusing only on numerical results,
+        qualitative research explores the stories and reasoning behind those results.
+      </p>
+
+      <p>
+        For companies developing a product, entering a market, improving customer
+        experience, or refining a SaaS offering, this deeper context can reveal issues
+        that a standard survey may not uncover. It gives research teams an opportunity
+        to listen, ask follow-up questions, and understand how people describe a problem
+        in their own words.
+      </p>
+
+      <h2 id="what-is">What Is Qualitative Market Research?</h2>
+
+      <p>
+        Qualitative market research is a research approach used to explore attitudes,
+        perceptions, experiences, motivations, and behaviors. The data is generally
+        descriptive rather than numerical and may come from interviews, focus groups,
+        observation, expert conversations, or open-ended responses.
+      </p>
+
+      <p>
+        The goal is not simply to count how many people chose an answer. Instead,
+        researchers look for patterns, themes, language, frustrations, expectations,
+        and reasons that can help explain customer behavior.
+      </p>
+
+      <h2 id="importance">Why Is Qualitative Market Research Important?</h2>
+
+      <p>
+        Businesses often have plenty of data but still lack a clear understanding of
+        why customers behave in a certain way. Qualitative research helps close that gap.
+      </p>
+
+      <ul>
+        <li>It reveals customer motivations and unmet needs.</li>
+        <li>It helps explain the reasons behind customer decisions.</li>
+        <li>It uncovers language customers naturally use to describe problems.</li>
+        <li>It can identify product or service frustrations early.</li>
+        <li>It generates ideas for products, features, campaigns, and positioning.</li>
+        <li>It provides context that can make quantitative findings easier to interpret.</li>
+      </ul>
+
+      <h2 id="methods">Common Qualitative Market Research Methods</h2>
+
+      <h3>1. In-Depth Customer Interviews</h3>
+      <p>
+        One-on-one interviews allow researchers to explore a participant's experience
+        in detail. Researchers can ask follow-up questions, clarify answers, and explore
+        unexpected topics that emerge during the conversation.
+      </p>
+
+      <h3>2. Focus Groups</h3>
+      <p>
+        Focus groups bring several participants together to discuss a product, concept,
+        category, or customer problem. Group interaction can reveal different opinions
+        and show how people respond to ideas presented by others.
+      </p>
+
+      <h3>3. Observation and Contextual Research</h3>
+      <p>
+        Observation looks at what people actually do in a real-world setting rather than
+        relying only on what they say they do. This can be especially useful when studying
+        workflows, product usage, purchasing behavior, or customer experiences.
+      </p>
+
+      <h3>4. Expert Interviews and Expert Calls</h3>
+      <p>
+        Conversations with experienced industry professionals can add market context,
+        specialist knowledge, and practical perspectives. Expert calls are useful when
+        a research team needs to understand a market, technology, business model, or
+        industry issue quickly.
+      </p>
+
+      <h3>5. Open-Ended Surveys</h3>
+      <p>
+        Open-ended questions allow respondents to answer in their own words. While these
+        responses can be harder to analyze than structured survey data, they can reveal
+        language, opinions, and issues that predefined answer choices might miss.
+      </p>
+
+      <h2 id="process">How to Conduct Qualitative Market Research</h2>
+
+      <p>
+        A strong qualitative research project starts with a clear research question.
+        Rather than asking a broad question such as “What do customers want?”, define
+        the specific decision or uncertainty the research needs to address.
+      </p>
+
+      <ol>
+        <li><strong>Define the research objective.</strong> Decide what you need to learn.</li>
+        <li><strong>Identify the right participants.</strong> Recruit people who match the research criteria.</li>
+        <li><strong>Prepare an interview or discussion guide.</strong> Use open-ended questions and logical follow-ups.</li>
+        <li><strong>Collect detailed responses.</strong> Listen for examples, emotions, language, and recurring problems.</li>
+        <li><strong>Organize the data.</strong> Group notes, transcripts, observations, and responses.</li>
+        <li><strong>Identify themes.</strong> Look for repeated patterns and meaningful differences.</li>
+        <li><strong>Translate findings into action.</strong> Connect insights to a real business decision.</li>
+      </ol>
+
+      <h2 id="analysis">How to Analyze Qualitative Research Data</h2>
+
+      <p>
+        Qualitative analysis usually involves reviewing conversations, notes, transcripts,
+        or written responses and identifying recurring themes. Researchers may code
+        statements, group similar observations, compare participant segments, and
+        document important examples.
+      </p>
+
+      <p>
+        A useful analysis separates isolated comments from patterns that appear repeatedly.
+        It is also important to preserve the original context so that an interesting quote
+        does not become a conclusion without supporting evidence.
+      </p>
+
+      <h2 id="business">Business Uses of Qualitative Market Research</h2>
+
+      <p>
+        Qualitative research can support decisions across product development, marketing,
+        customer experience, competitive research, and strategic planning.
+      </p>
+
+      <ul>
+        <li><strong>Product development:</strong> discover pain points and feature opportunities.</li>
+        <li><strong>Customer experience:</strong> understand friction across the customer journey.</li>
+        <li><strong>Marketing:</strong> learn how customers describe problems and desired outcomes.</li>
+        <li><strong>Positioning:</strong> explore how customers perceive different products or brands.</li>
+        <li><strong>Market entry:</strong> understand local needs, barriers, and buying behavior.</li>
+        <li><strong>Competitive research:</strong> explore how customers compare alternatives.</li>
+      </ul>
+
+      <h2 id="saas">Qualitative Market Research for SaaS Companies</h2>
+
+      <p>
+        SaaS companies can use qualitative research throughout the product lifecycle.
+        Customer interviews can reveal why users sign up, where onboarding becomes difficult,
+        which features are confusing, and what causes customers to continue or stop using
+        a product.
+      </p>
+
+      <p>
+        Product teams can also use qualitative interviews before building a new feature.
+        Talking to users early can help clarify the actual problem before engineering
+        resources are committed to a particular solution.
+      </p>
+
+      <h2 id="comparison">Qualitative vs. Quantitative Market Research</h2>
+
+      <p>
+        Qualitative and quantitative research answer different types of questions.
+        In many business projects, they can complement one another rather than being
+        treated as competing approaches.
+      </p>
+
+      <table class="comparison">
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th>Qualitative Research</th>
+            <th>Quantitative Research</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data type</td>
+            <td>Descriptive and contextual</td>
+            <td>Numerical and statistical</td>
+          </tr>
+          <tr>
+            <td>Core questions</td>
+            <td>Why? How? What is the experience?</td>
+            <td>How many? How often? How much?</td>
+          </tr>
+          <tr>
+            <td>Typical sample</td>
+            <td>Smaller, targeted groups</td>
+            <td>Larger samples</td>
+          </tr>
+          <tr>
+            <td>Common methods</td>
+            <td>Interviews, focus groups, observation</td>
+            <td>Surveys, experiments, structured datasets</td>
+          </tr>
+          <tr>
+            <td>Primary outcome</td>
+            <td>Themes, motivations, and insights</td>
+            <td>Measurements, patterns, and estimates</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="mistakes">Common Qualitative Research Mistakes</h2>
+
+      <p>
+        Poorly designed qualitative research can produce interesting conversations
+        without producing useful business insight. Common problems include asking
+        leading questions, recruiting the wrong participants, trying to confirm a
+        preferred conclusion, and treating one unusual comment as a broad trend.
+      </p>
+
+      <p>
+        Another common issue is collecting too much information without defining how
+        it will influence a decision. A research project becomes more useful when the
+        team knows what decision the findings are expected to support.
+      </p>
+
+      <h2 id="when">When Should You Use Qualitative Market Research?</h2>
+
+      <p>
+        Qualitative research is especially useful when a business is trying to understand
+        an unfamiliar problem, explore customer motivations, investigate a confusing
+        experience, test early concepts, or discover questions that should later be
+        measured quantitatively.
+      </p>
+
+      <p>
+        If you already know the variables you need to measure and want statistically
+        comparable results, quantitative research may be more appropriate. If you are
+        still trying to understand the problem itself, qualitative research can provide
+        valuable discovery and context.
+      </p>
+
+      <h2 id="takeaway">Final Takeaway</h2>
+
+      <p>
+        Qualitative market research gives businesses a closer look at the human side of
+        markets. Interviews, focus groups, observation, open-ended questions, and expert
+        conversations can uncover motivations and problems that numbers alone may not
+        explain.
+      </p>
+
+      <p>
+        The strongest research connects those insights to a clear business decision.
+        When qualitative findings are collected systematically, analyzed carefully, and
+        combined with other evidence when appropriate, they can become a practical input
+        into product, marketing, customer experience, and strategy decisions.
+      </p>
+
+      <h2 id="faq">Frequently Asked Questions</h2>
+
+      <div class="faq">
+        <h3>What is qualitative market research?</h3>
+        <p>
+          It is a research approach focused on understanding people's experiences,
+          motivations, opinions, perceptions, and behaviors through descriptive data.
+        </p>
+      </div>
+
+      <div class="faq">
+        <h3>What are the main qualitative research methods?</h3>
+        <p>
+          Common methods include in-depth interviews, focus groups, observation,
+          expert interviews, expert calls, and open-ended surveys.
+        </p>
+      </div>
+
+      <div class="faq">
+        <h3>Is qualitative research useful for SaaS?</h3>
+        <p>
+          Yes. SaaS teams can use it to understand onboarding problems, product
+          experiences, customer needs, feature expectations, and reasons behind
+          retention or churn-related behavior.
+        </p>
+      </div>
+
+      <div class="cta">
+        <h2>Turn Research Into Practical Insight</h2>
+        <p>
+          Explore practical research tools and resources designed to make market
+          research easier to understand and apply.
+        </p>
+        <a href="https://jassicamcgrat.github.io/Research-Toolkit/">Explore the Research Toolkit</a>
+      </div>
+    </article>
+
+    <aside>
+      <div class="sidebar">
+        <div class="side-card">
+          <h3>In This Article</h3>
+          <nav class="toc">
+            <a href="#what-is">What Is Qualitative Market Research?</a>
+            <a href="#importance">Why It Matters</a>
+            <a href="#methods">Research Methods</a>
+            <a href="#process">How to Conduct Research</a>
+            <a href="#analysis">How to Analyze Data</a>
+            <a href="#business">Business Uses</a>
+            <a href="#saas">SaaS Research</a>
+            <a href="#comparison">Qualitative vs. Quantitative</a>
+            <a href="#mistakes">Common Mistakes</a>
+            <a href="#when">When to Use It</a>
+            <a href="#faq">FAQs</a>
+          </nav>
+        </div>
+
+        <div class="side-card">
+          <h3>More Research Resources</h3>
+          <p style="font-size:13px;color:#6b6475;">
+            Explore practical tools, expert conversations, and research resources.
+          </p>
+          <a href="https://jassicamcgrat.github.io/Research-Toolkit/">Research Toolkit</a><br><br>
+          <a href="https://jassicamcgrat.github.io/expert-calls-meetings/">Expert Calls &amp; Meetings</a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">Jassica McGrat</div>
+      <p>Practical research tools, market insights, and expert perspectives for better-informed business decisions.</p>
+    </div>
+
+    <div>
+      <a href="https://jassicamcgrat.github.io/">Home</a>
+      <a href="https://jassicamcgrat.github.io/Research-Toolkit/">Research Toolkit</a>
+      <a href="https://www.theinsightsdesk.com/">The Insights Desk</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
